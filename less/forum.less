@@ -1,0 +1,31 @@
+.NewsSection {
+  display: block;
+}
+
+.NewsSection-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1215px;
+  padding: 0 15px;
+  margin: auto;
+  gap: 10px;
+}
+
+.NewsSection-title {
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.NewsSection-item {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .NewsSection {
+    display: none;
+  }
+}
