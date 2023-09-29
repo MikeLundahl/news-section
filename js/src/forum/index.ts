@@ -9,10 +9,15 @@ app.initializers.add('mbl/news-section', () => {
     const isActive: number = parseInt(app.forum.attribute('isActive'));
 
     if (isActive) {
-      if ( vdom.children && vdom.children.splice) {
-        vdom.children.splice(1,0, m(NewsSection));
+      if ( vdom.children ) {
+        // @ts-ignore
+        if ("splice" in vdom.children) {
+          vdom.children.splice(1, 0, m(NewsSection));
+        }
       }
     }
+
+
 
   })
 
