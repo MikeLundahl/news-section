@@ -35,7 +35,8 @@ export default class NewsSection extends Component {
   }
 
   getArticles() {
-    m.request('api/newsEngine')
+    const url = app.forum.attribute('apiUrl') + '/newsEngine';
+    m.request(url)
       .then((data) => {
         return (this.articles = data.items.slice(0, 5));
       })
