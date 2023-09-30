@@ -24,4 +24,3 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/mbl/news-section)
 - [GitHub](https://github.com/mbl/news-section)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
