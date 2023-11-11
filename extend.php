@@ -22,9 +22,8 @@ return [
         ->css(__DIR__.'/less/admin.less'),
     new Extend\Locales(__DIR__.'/locale'),
     (new Extend\Settings())
-        ->serializeToForum('isActive', 'mbl-news-section.is-active')
-        ->serializeToForum('url', 'mbl-news-section.url')
-        ->serializeToForum('apiKey', 'mbl-news-section.api-key'),
+        ->serializeToForum('mbl-news-section.isActive', 'mbl-news-section.is-active')
+        ->serializeToForum('mbl-news-section.trackingTag', 'mbl-news-section.plausible-tracking-tag'),
     (new Extend\Routes('api'))
         ->get('/newsEngine', 'newsEngine.index', controllers\NewsEngineController::class)
 

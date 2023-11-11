@@ -1,9 +1,11 @@
+import app from 'flarum/forum/app';
 import Component from 'flarum/common/Component';
 export default class NewsSection extends Component {
   oninit(vnode) {
     super.oninit(vnode);
     this.articles = [];
     this.getArticles();
+    this.trackingTag = app.forum.attribute('mbl-news-section.trackingTag');
   }
 
   oncreate(vnode) {
@@ -23,7 +25,7 @@ export default class NewsSection extends Component {
             this.articles.map((item) => {
               return (
                 <div className="NewsSection-item">
-                  <a href={item.link} target="_blank">
+                  <a className={`${this.trackingTag}`} href={item.link} target="_blank">
                     {item.title}
                   </a>
                 </div>

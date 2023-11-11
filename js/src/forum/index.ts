@@ -5,7 +5,7 @@ import NewsSection from './components/NewsSection';
 
 app.initializers.add('mbl/news-section', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
-    const isActive: number = parseInt(app.forum.attribute('isActive'));
+    const isActive: number = parseInt(app.forum.attribute('mbl-news-section.isActive'));
 
     if (isActive) {
       if (vdom.children) {
